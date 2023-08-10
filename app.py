@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-import numpy as np
+
 #loading the model
 model_filename='decTree.joblib'
 saved_model=joblib.load(model_filename)
@@ -12,7 +12,7 @@ petal_length = st.number_input('Enter Petal Length:')
 petal_width = st.number_input('Enter Petal Width:')
 
 if st.button('Predict'):
-     features=np.array([[sepal_length, sepal_width, petal_length, petal_width]])
+     features=[[sepal_length, sepal_width, petal_length, petal_width]]
      prediction=saved_model.predict(features)
 
      if prediction==0:
