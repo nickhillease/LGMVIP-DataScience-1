@@ -1,5 +1,6 @@
 import streamlit as st
 import joblib
+import numpy as np
 #loading the model
 model_filename='decTree.joblib'
 saved_model=joblib.load(model_filename)
