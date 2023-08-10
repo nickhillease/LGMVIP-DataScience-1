@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 #loading the model
-model_filename='decTree.joblib'
+model_filename=r'decTree.joblib'
 saved_model=joblib.load(model_filename)
 
 
