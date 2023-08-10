@@ -13,7 +13,7 @@ petal_width = st.number_input('Enter Petal Width:')
 
 # Sepal length,Sepal Width,Petal Length,Petal Width
 if st.button('Predict'):
-     features=[[sepal_length, sepal_width, petal_length, petal_width]]
+     features=np.array([sepal_length, sepal_width, petal_length, petal_width])
      prediction=saved_model.predict(features)
 
      if prediction==0:
